@@ -10,7 +10,7 @@ class TestWeb(unittest.TestCase):
         browser = webdriver.Chrome()
         browser.get(link)
         browser.implicitly_wait(5)
-        browser.find_element(By.CSS_SELECTOR,"body > div.container > form > div.first_block > div.form-group.first_class > input").send_keys("Vl")
+        browser.find_element(By.CSS_SELECTOR, "body > div.container > form > div.first_block > div.form-group.first_class > input").send_keys("Vl")
         browser.find_element(By.XPATH, "/html/body/div[1]/form/div[1]/div[2]/input").send_keys("RG")
         browser.find_element(By.XPATH, "/html/body/div[1]/form/div[1]/div[3]/input").send_keys("@yandex")
         browser.find_element(By.CSS_SELECTOR,"body > div.container > form > div.second_block > div.form-group.first_class > input").send_keys("234")
@@ -35,7 +35,7 @@ class TestWeb(unittest.TestCase):
 
         message = browser.find_element(By.CSS_SELECTOR, "body > div.container > h1")
         message_text = message.text
-        self.assertEqual(message_text,"Congratulations! You have successfully registered!","Всё плохо")
+        self.assertEqual(message_text,"Congratulations! You have successfully registered!", "Всё плохо")
 
 if __name__ == "__main__":
     unittest.main()
